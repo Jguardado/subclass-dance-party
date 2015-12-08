@@ -5,6 +5,9 @@ var MakeDancer = function (top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps
   //console.log(this.$node)
   this.step();
+  var randomTop = Math.floor(Math.random()*500);
+  var randomLeft = Math.floor(Math.random()*800);
+  this.setPosition(randomTop, randomLeft);
 };
 
 MakeDancer.prototype.step = function (timeBetweenSteps) {
