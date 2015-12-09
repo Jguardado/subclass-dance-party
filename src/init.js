@@ -34,11 +34,9 @@ console.log(dancerMakerFunction)
   });
 
 $(".lineUpButton").on('click', function(event) {
-  var allDancers = window.dancers;
-
-  for (var i = 0; i < allDancers.length; i++){
-    allDancers[i].top = 200;
-    allDancers[i].left = 200 + 10;
+  for (var i = 0; i < window.dancers.length; i++){
+    window.dancers[i].lineUp(); 
+    console.log(window.dancers[i].top)
   }
 });
 

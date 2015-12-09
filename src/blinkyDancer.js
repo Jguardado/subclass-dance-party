@@ -7,9 +7,19 @@ makeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 makeBlinkyDancer.prototype.step = function (timeBetweenSteps){
-  
-  this.$node.toggle();
   MakeDancer.prototype.step.call(this);
+  var blinkyImage = "http://gifdanceparty.giphy.com/dancers/twerk.gif";
+  
+
+  // this.$node.toggle();
+  this.$node.css({"background": "url(http://gifdanceparty.giphy.com/dancers/twerk.gif) no-repeat ",
+                  // "background-size": "cover",
+                  "border": "none", 
+                  "height": "500px",
+                  "width": "250px"
+                    });
 }
+
+
 
 
